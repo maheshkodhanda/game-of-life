@@ -25,7 +25,7 @@ pipeline
 			{
 			steps
 				{
-				git branch:'$Branches',url:'chinniprashanth001@gmail.com'
+				git branch:'$Branches',url:'https://github.com/maheshkodhanda/game-of-life.git'
 				}
 			}
 		stage('compile and build')
