@@ -1,6 +1,6 @@
 pipeline
 	{
-		agent {label 'slave1'}
+		agent any
 	environment
 		{
 		sonar_url='http://172.31.12.119:9000'
