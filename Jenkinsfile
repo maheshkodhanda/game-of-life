@@ -58,6 +58,15 @@ pipeline
 				nexusArtifactUploader artifacts: [[artifactId: 'gameoflife', classifier: '', file: '/var/lib/jenkins/workspace/pipeline-job/gameoflife-build/target/gameoflife-build-1.0-SNAPSHOT.jar', type: 'jar']], credentialsId: '46cdf4cf-2240-470c-ac59-d5740fedad2b', groupId: 'com.wakaleo.gameoflife', nexusUrl: '172.31.12.119:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'game-of-life_versions', version: '4.0.0'	
 				}
 			}
-		
+		stage('docker build')
+			{
+			steps
+				{
+				sh '''
+				cd $(WORKSPACE)
+				docker build -t mahesh78/testdoc1:2 .
+				'''
+				}
+			}
 		}
 	}
